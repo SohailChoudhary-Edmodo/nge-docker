@@ -14,8 +14,8 @@
 
     <name>Spring Boot Docker MySQL Sample</name>
     <organization>
-		<name>Jiwhiz Consulting Inc.</name>
-		<url>https://www.jiwhiz.com</url>
+		<name>Meruvian</name>
+		<url>https://www.meruvian.org</url>
 	</organization>
     <licenses>
 		<license>
@@ -27,8 +27,8 @@
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <start-class>com.jiwhiz.demo.DemoApplication</start-class>
-        <docker.image.prefix>jiwhiz</docker.image.prefix>
+        <start-class>org.meruvian.tzolkin.docker.DemoApplication</start-class>
+        <docker.image.prefix>merv</docker.image.prefix>
     </properties>
 
 	<dependencies>

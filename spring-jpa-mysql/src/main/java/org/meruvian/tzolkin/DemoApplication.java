@@ -1,4 +1,4 @@
-package com.jiwhiz.demo;
+package org.meruvian.tzolkin.docker;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
