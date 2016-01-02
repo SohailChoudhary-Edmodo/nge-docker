@@ -1,0 +1,13 @@
+web:
+  build: .
+  links:
+    - database
+  ports:
+    - "8080:8080"
+
+database:
+  image: mariadb
+  volumes:
+    - /opt/mysql:/var/lib/mysql:rw
+    - extras/docker-compose/my.cnf:/etc/mysql/my.cnf:ro
+  env_file: extras/docker-compose/compose.env
