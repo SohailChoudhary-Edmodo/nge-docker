@@ -1,0 +1,18 @@
+web:
+  image: merv/spring-boot-docker-mysql
+  links:
+    - database:mysql
+  ports:
+    - "8080:8080"
+
+# docker run -i -p 127.0.0.1:3306:3306 --name demo-mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=demo -e MYSQL_USER=demo_user -e MYSQL_PASSWORD=demo_pass -d mysql:latest
+database:
+  image: mysql:latest
+  volumes:
+    - /opt/mysql:/var/lib/mysql:rw
+  #env_file: extras/docker-compose/compose.env
+  environment:
+   - MYSQL_ROOT_PASSWORD=password
+   - MYSQL_USER=demo_user
+   - MYSQL_PASSWORD=demo_pass
+   - MYSQL_DATABASE=demo
