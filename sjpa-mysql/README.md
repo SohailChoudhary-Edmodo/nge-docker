@@ -34,12 +34,12 @@ docker logs demo-app
 ~~~
 
 Open http://localhost:8080 in browser and you should see the message
-
+~~~
  docker stop $(docker ps -a -q)
  docker rm $(docker ps -a -q)
   docker rmi $(docker images -q)
 
-~~~
+
 docker run -it --link demo-mysql:mysql --rm mysql sh -c 'exec mysql -h"$MYSQLPORT3306TCPADDR" -P"$MYSQLPORT3306TCPPORT" -uroot -p"$MYSQLENVMYSQLROOTPASSWORD"'	
 
 docker run -it --link springdocker_database_1:mysql  -e MYSQL_PWD=password -e MYSQL_HOST=mysql --rm mysql sh -c 'exec mysql -h"localhost" -P"3306" -uroot -p"password"'	
