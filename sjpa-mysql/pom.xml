@@ -78,7 +78,7 @@
                 <version>0.2.6</version>
                 <configuration>
                     <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-                    <dockerDirectory>src/main/docker</dockerDirectory>
+                    <dockerDirectory>src/main/docker/web</dockerDirectory>
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>

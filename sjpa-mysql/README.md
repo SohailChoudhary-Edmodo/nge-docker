@@ -50,4 +50,6 @@ docker run --rm -it --link springdocker_database_1:mysql-server -e MYSQL_PWD=pas
 docker run -it --link springdocker_database_1:mysql  -e MYSQL_PWD=password -e MYSQL_HOST=mysql --rm mysql sh -c 'exec mysql -h"localhost" -P"3306" -uroot -p"password"'	
 
 docker exec -it springdocker_database_1 mysql -u root -p 
+
+mysql -h "sjpamysql_database_run_1" -P "3306" -u "demo_pass" --password="demo_pass" demo
 ~~~
