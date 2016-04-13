@@ -2,4 +2,4 @@ FROM frolvlad/alpine-oraclejdk8:slim
 VOLUME /tmp
 ADD demo.jar app.jar
 RUN sh -c 'touch /app.jar'
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/demo.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
