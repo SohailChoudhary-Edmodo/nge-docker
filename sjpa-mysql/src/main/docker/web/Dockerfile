@@ -1,6 +1,5 @@
-FROM java:openjdk-8-jdk
+FROM frolvlad/alpine-oraclejdk8:slim
 VOLUME /tmp
-ADD demo.jar demo.jar
-CMD exec /usr/sbin/apachectl -D FOREGROUND
-RUN bash -c 'touch /demo.jar'
+ADD demo.jar app.jar
+RUN sh -c 'touch /app.jar'
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/demo.jar"]
