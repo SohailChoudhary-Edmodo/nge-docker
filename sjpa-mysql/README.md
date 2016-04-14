@@ -2,7 +2,12 @@ Create Docker Image
 
 ~~~
 cd spring-jpa-mysql
-mvn clean package docker:build
+mvn clean package
+~~~
+
+Run with docker compose
+~~~
+docker-compose up
 ~~~
 
 Run MySQL 5.6 in Docker container:

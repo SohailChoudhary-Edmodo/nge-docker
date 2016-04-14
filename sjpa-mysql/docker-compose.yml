@@ -1,6 +1,6 @@
 # docker run -i -p 127.0.0.1:3306:3306 --name demo-mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=demo -e MYSQL_USER=demo_user -e MYSQL_PASSWORD=demo_pass -d mysql:latest
 web:
-  image: fthamura/spring-boot-docker-mysql
+  image: fthamura/workshop-docker
   container_name: web
   links:
     - mysql:mysql
