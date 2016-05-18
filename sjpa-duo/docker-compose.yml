@@ -10,7 +10,6 @@ web:
 
 mysql:
   image: mariadb:latest
-  container_name: mysqldb
   environment:
    MYSQL_ROOT_PASSWORD: password
    MYSQL_DATABASE: demo
